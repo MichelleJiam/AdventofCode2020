@@ -1,5 +1,5 @@
 # AdventofCode2020
-Learning Rust from scratch through the [Advent of Code 2020](https://adventofcode.com/2020) puzzles
+Learning **Rust** from scratch using the [Advent of Code 2020](https://adventofcode.com/2020) puzzles
 
 	
               .     .  .      +     .      .          .
