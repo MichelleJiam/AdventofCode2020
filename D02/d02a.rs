@@ -2,12 +2,12 @@ use std::fs::File;
 use std::io::Read;
 
 fn main() {
-	let mut file = File::open("input").unwrap();
-	let mut content = String::new();
-	file.read_to_string(&mut content).unwrap();
+	let mut file = File::open("d02-input").unwrap();
+	let mut input = String::new();
+	file.read_to_string(&mut input).unwrap();
 
 	let mut valid_pass = 0;
-	for line in content.lines() {
+	for line in input.lines() {
 		let line2 = &line.replace(":", " ");
 		let chunks: Vec<_> = line2.split_whitespace().collect();
 		// chunks[0] = range, chunks[1] = char, chunks[2] = password
