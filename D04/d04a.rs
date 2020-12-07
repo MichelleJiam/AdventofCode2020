@@ -7,32 +7,19 @@ fn main() {
 	file.read_to_string(&mut input).unwrap();
 
 	let mut valid = 0u32;
-	let mut data = Vec::<String>::new();
-	for (index, line) in input.lines().enumerate() {
-		if !line.is_empty() {
-			let line2 = &line.replace(":", " ");
-			let mut data2: Vec<String> = line2.split_whitespace().map(str::to_string).collect();
-			data.append(&mut data2);
-		}
-		if (line.is_empty() && !data.is_empty()) || index == input.lines().count() - 1 {
-			valid += check_validity(&data);
-			data.clear();
-		}
+	let data: Vec<String> = input.split("\n\n").map(|s| s.to_string()).collect();
+	for line in data.iter() {
+		valid += check_validity(line);
 	}
 	println!("Number of valid passports: {}", valid);
 }
 
-fn check_validity(data: &Vec<String>) -> u32 {
-	let mut found = 0;
+fn check_validity(line: &str) -> u32 {
 	let strings: [&str; 7] = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"];
 
-	for string in strings.iter() {
-		if data.iter().any(|s| s == string) {
-			found += 1;
-		}
-	}
-	match found {
-		7 => return 1,
-		_ => return 0,
+	if strings.iter().all(|field| line.contains(field)) {
+		return 1;
+	} else {
+		return 0;
 	}
 }
