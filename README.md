@@ -40,3 +40,15 @@ Learning **Rust** from scratch using the [Advent of Code 2020](https://adventofc
 **Day 5: Binary Boarding**
 - [Problem](https://adventofcode.com/2020/day/5)
 - [Solution](https://github.com/MichelleJiam/AdventofCode2020/tree/master/D05)
+
+**Day 6: Custom Customs**
+- [Problem](https://adventofcode.com/2020/day/6)
+- [Solution](https://github.com/MichelleJiam/AdventofCode2020/tree/master/D06)
+
+**Day 7: Handy Haversacks**
+- [Problem](https://adventofcode.com/2020/day/7)
+- [Solution for part 1](https://github.com/MichelleJiam/AdventofCode2020/tree/master/D07)
+
+**Day 8: Handheld Halting**
+- [Problem](https://adventofcode.com/2020/day/8)
+- [Solution](https://github.com/MichelleJiam/AdventofCode2020/tree/master/D08)
